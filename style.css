@@ -1,0 +1,134 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --blue: hsl(246, 80%, 60%);
+    --workRed: hsl(15, 100%, 70%);
+    --playBlue: hsl(195, 74%, 62%);
+    --studyRed: hsl(348, 100%, 68%);
+    --exerciseGreen: hsl(145, 58%, 55%);
+    --socialViolet: hsl(264, 64%, 52%);
+    --selfCareOrange: hsl(43, 84%, 65%);
+
+    --veryDarkBlue: hsl(226, 43%, 10%);
+    --darkBlue: hsl(235, 46%, 20%);
+    --desaturatedBlue: hsl(235, 45%, 61%);
+    --paleBlue: hsl(236, 100%, 87%);
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    color: #fff;
+    background: var(--veryDarkBlue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(300px, 1fr));
+    gap: 1.5rem;
+    max-width: 1000px;
+    
+}
+
+.main-card {
+    grid-row: 1/3;
+    background-color: var(--darkBlue);
+    border-radius: .5rem;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.main-card > .card-content {
+    border-radius: .5rem;
+    padding: 1.5rem;
+    background-color: var(--blue);
+}
+.card-content img {
+    width: 5rem;
+    border-radius: 50%;
+    border: 3px solid #fff;
+}
+.card-content p{
+    margin-top: 30px;
+    opacity: .7;
+}
+.card-content .name {
+    font-size: 3rem;
+    font-weight: 300;
+}
+.side-bar{
+    padding: 1.5rem;
+    background-color: var(--darkBlue);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* align-items: center; */
+}
+
+
+
+
+.card{
+    background-color: var(--darkBlue);
+    border-radius: .5rem;
+    overflow: hidden;
+}
+.card-content{
+    padding: 1rem;
+}
+
+.work-bg {
+    background-color: var(--workRed);
+}
+
+.play-bg {
+    background-color: var(--playBlue);
+}
+
+.study-bg {
+    background-color: var(--studyRed);
+}
+
+.exercise-bg {
+    background-color: var(--exerciseGreen);
+}
+
+.social-bg {
+    background-color: var(--socialViolet);
+}
+
+.selfCare-bg {
+    background-color: var(--selfCareOrange);
+}
+
+
+
+
+@media (max-width:376px) {
+    .wrapper {
+        background: red;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+.attribution {
+    display: none;
+    width: 100%;
+    background-color: #555;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
