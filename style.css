@@ -30,7 +30,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    /* height: 100vh; */
 }
 
 .wrapper {
@@ -50,7 +50,7 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    min-height: 300px;
+    /* min-height: 300px; */
 }
 .main-card > .Acard-content {
     border-radius: var(--radius);
@@ -60,6 +60,7 @@ body {
 }
 .Acard-content img {
     width: 5rem;
+    height: 5rem;
     border-radius: 50%;
     border: 3px solid #fff;
 }
@@ -129,7 +130,10 @@ body {
 .subtitle p{
     font-size: 18px;
 }
-.card-content > p{
+.detail h2{
+    margin-bottom: 45px;
+}
+.detail > p{
     opacity: 0.5;
 }
 
@@ -178,26 +182,56 @@ body {
         --radius: .5rem;
     }
     .wrapper {
-        background: red;
+        /* background: red; */
         display: flex;
         flex-direction: column;
+        height: 100%;
     }
     .main-card{
-        flex-direction: row;
+        
     }
     .Acard-content{
         /* width: 100%; */
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        align-items: center;
+        justify-content: space-evenly;
+        
+    }
+    .Acard-content p{
+        margin: 0;
+        position: absolute;
+        top: 30px;
+    }
+    .Acard-content .name{
+        font-size: 26px;
     }
     .side-bar{
         flex-direction: row;
     }
 
     .card{
-        /* min-height: 200px; */
+        min-height: 200px;
     }
+    .detail{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .detail h2{
+        font-size: 32px;
+        margin: 0;
+    }
+    .detail p{
+        opacity: 0.6;
+    }
+    
 }
 
 
+
+/* Footer */
 .attribution {
     display: none;
     width: 100%;
