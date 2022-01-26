@@ -30,6 +30,7 @@
         href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap"
         rel="stylesheet"
     >
+    
     <title>Frontend Mentor | Time tracking dashboard</title>
 </head>
 
@@ -37,7 +38,7 @@
     <div class="wrapper">
         <!-- 主要顯示卡 -->
         <div class="firstCard main-card">
-            <div class="card-content"><img
+            <div class="Acard-content"><img
                     src="./images/image-jeremy.png"
                     alt=""
                 >
@@ -49,15 +50,15 @@
                 </div>
             </div>
             <div class="side-bar">
-                <div>Daily</div>
-                <div>Weekly</div>
-                <div>Monthly</div>
+                <div id="daily">Daily</div>
+                <div id="weekly">Weekly</div>
+                <div id="monthly">Monthly</div>
             </div>
         </div>
 
         <!-- 六小卡 -->
         <!-- work -->
-        <div class="card">
+        <div class="card" id="work">
             <div class="icon work-bg"><svg
                     width="79"
                     height="79"
@@ -70,13 +71,13 @@
                     />
                 </svg></div>
             <div class="card-content">
-                <div class="subtitle">work ...</div>
-                <h2>32hrs</h2>
-                <p>last week - 36hrs</p>
+                <div class="subtitle"><p>Work</p> <p>...</p></div>
+                <h2 id="workNow">32hrs</h2>
+                <p id="workPre">last week - 36hrs</p>
             </div>
         </div>
         <!-- play -->
-        <div class="card ">
+        <div class="card "id="play">
             <div class="icon play-bg"><svg
                     width="76"
                     height="77"
@@ -89,13 +90,13 @@
                     />
                 </svg></div>
             <div class="card-content">
-                <div class="subtitle">work ...</div>
-                <h2>32hrs</h2>
-                <p>last week - 36hrs</p>
+                <div class="subtitle"><p>Play</p> <p>...</p></div>
+                <h2 id="playNow">32hrs</h2>
+                <p id="playPre">last week - 36hrs</p>
             </div>
         </div>
         <!-- study -->
-        <div class="card">
+        <div class="card"id="study">
             <div class="icon study-bg"><svg
                     width="79"
                     height="79"
@@ -108,13 +109,13 @@
                     />
                 </svg></div>
             <div class="card-content">
-                <div class="subtitle">work ...</div>
-                <h2>32hrs</h2>
-                <p>last week - 36hrs</p>
+                <div class="subtitle"><p>Study</p> <p>...</p></div>
+                <h2 id="studyNow">32hrs</h2>
+                <p id="studyPre">last week - 36hrs</p>
             </div>
         </div>
         <!-- exercise -->
-        <div class="card">
+        <div class="card"id="exercise">
             <div class="icon exercise-bg"><svg
                     width="81"
                     height="55"
@@ -127,13 +128,13 @@
                     />
                 </svg></div>
             <div class="card-content">
-                <div class="subtitle">work ...</div>
-                <h2>32hrs</h2>
-                <p>last week - 36hrs</p>
+                <div class="subtitle"><p>Exercise</p> <p>...</p></div>
+                <h2 id="exerciseNow">32hrs</h2>
+                <p id="exercisePre">last week - 36hrs</p>
             </div>
         </div>
         <!-- social -->
-        <div class="card">
+        <div class="card"id="social">
             <div class="icon social-bg"><svg
                     width="75"
                     height="100"
@@ -149,13 +150,13 @@
                     </g>
                 </svg></div>
             <div class="card-content">
-                <div class="subtitle">work ...</div>
-                <h2>32hrs</h2>
-                <p>last week - 36hrs</p>
+                <div class="subtitle"><p>Social</p> <p>...</p></div>
+                <h2 id="socialNow">32hrs</h2>
+                <p id="socialPre">last week - 36hrs</p>
             </div>
         </div>
         <!-- self care -->
-        <div class="card">
+        <div class="card"id="selfCare">
             <div class="icon selfCare-bg"><svg
                     width="67"
                     height="67"
@@ -168,9 +169,9 @@
                     />
                 </svg></div>
             <div class="card-content">
-                <div class="subtitle">work ...</div>
-                <h2>32hrs</h2>
-                <p>last week - 36hrs</p>
+                <div class="subtitle"><p>Self Care</p> <p>...</p></div>
+                <h2 id="selfCareNow">32hrs</h2>
+                <p id="selfCarePre">last week - 36hrs</p>
             </div>
         </div>
     </div>
@@ -187,6 +188,7 @@
         >Frontend Mentor</a>.
         Coded by <a href="#">Your Name Here</a>.
     </div>
+    <script src="./JS/store.js"></script>
 </body>
 
 </html>
