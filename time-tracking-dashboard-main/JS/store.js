@@ -69,3 +69,4 @@ function displayMonthly() {
 document.getElementById('daily').addEventListener('click', displayDaily);
 document.getElementById('weekly').addEventListener('click', displayWeekly);
 document.getElementById('monthly').addEventListener('click', displayMonthly);
+window.addEventListener('load',displayDaily);

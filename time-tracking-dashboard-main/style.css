@@ -30,7 +30,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* height: 100vh; */
+    min-height: 100vh;
 }
 
 .wrapper {
@@ -38,7 +38,7 @@ body {
     grid-template-columns: repeat(4, minmax(300px, 1fr));
     grid-template-rows: repeat(2,300px);
     gap: 1.5rem;
-    max-width: 1000px;
+    /* max-width: 1000px; */
     
 }
 
@@ -89,7 +89,7 @@ body {
 }
 
 
-
+/* 資訊卡 */
 .card{
     border-radius: var(--radius);
     overflow: hidden;
@@ -137,19 +137,6 @@ body {
     opacity: 0.5;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 #work {
     background-color: var(--workRed);
 }
@@ -173,9 +160,6 @@ body {
 #selfCare {
     background-color: var(--selfCareOrange);
 }
-
-
-
 
 @media (max-width:376px) {
     :root{
@@ -227,19 +211,4 @@ body {
         opacity: 0.6;
     }
     
-}
-
-
-
-/* Footer */
-.attribution {
-    display: none;
-    width: 100%;
-    background-color: #555;
-    font-size: 11px;
-    text-align: center;
-}
-
-.attribution a {
-    color: hsl(228, 45%, 44%);
 }
