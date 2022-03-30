@@ -74,7 +74,7 @@ body {
     gap: 2rem;
 }
 .hero_text h2 {
-    font-size: min(4rem, 8vw);
+    font-size: min(2.8rem, 8vw);
     color: var(--black);
     line-height: 1;
     font-weight: 600;
@@ -98,11 +98,11 @@ body {
 
 .hero_text button span {
     text-transform: uppercase;
-    letter-spacing: 1rem;
+    letter-spacing: 0.6rem;
     color: var(--black);
     text-align: left;
     font-weight: 500;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
 .btn_area {
@@ -156,7 +156,7 @@ body {
 
 .botside .pureText h2 {
     /* font-size: 2rem; */
-    font-size: min(4vw, 2rem);
+    font-size: min(4vw, 1.4rem);
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: .3em;
