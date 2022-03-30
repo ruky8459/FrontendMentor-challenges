@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta
+        http-equiv="X-UA-Compatible"
+        content="IE=edge"
+    >
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: rgb(32, 129, 209);
+        }
+
+        .block {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(134deg, #ff006a, #ff8d00);
+            box-shadow: 6px 13px 20px #ff2d008a;
+            border-radius: 6px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.5s ease-in-out;
+
+        }
+
+        .cta {
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            background: blue;
+        }
+
+        .toggle-btn {
+            width: 38px;
+            height: 4px;
+            border-radius: 6px;
+            background: #FFF;
+            position: relative;
+            top: 50%;
+            left: 8px;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .toggle-btn::before {
+            content: '';
+            width: 28px;
+            height: 4px;
+            border-radius: 6px;
+            background: #fff;
+            position: absolute;
+            top: -10px;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .toggle-btn::after {
+            content: '';
+            width: 16px;
+            height: 4px;
+            border-radius: 6px;
+            background: #fff;
+            position: absolute;
+            top: 10px;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .active .toggle-btn {
+            background: transparent;
+            transition: all 0.2s ease-in-out;
+
+        }
+
+        .active .toggle-btn::before {
+            width: 36px;
+            /* left: 7px; */
+            transform: translateY(10px) rotate(45deg);
+            transition: all 0.5s ease-in-out;
+        }
+
+        .active .toggle-btn::after {
+            width: 36px;
+            /* left: 7px; */
+            transform: translateY(-10px) rotate(-45deg);
+            transition: all 0.5s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="block">
+        <div class="cta">
+            <div class="toggle-btn"></div>
+        </div>
+    </div>
+    <script>
+        function toggle() {
+            document.querySelector('.cta').classList.toggle('active');
+            console.log('eee');
+        }
+        document.querySelector('.cta').addEventListener('click', toggle);
+    </script>
+</body>
+
+</html>

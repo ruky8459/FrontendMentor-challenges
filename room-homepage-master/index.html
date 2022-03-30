@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    > <!-- displays site properly based on user's device -->
+
+    <link
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="./images/favicon-32x32.png"
+    >
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+    <title>Frontend Mentor | Room homepage</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+        .attribution {
+            font-size: 11px;
+            text-align: center;
+        }
+
+        .attribution a {
+            color: hsl(228, 45%, 44%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="topside">
+            <div class="hero block">
+                <div class="nav">
+                    <div class="menu"></div>
+                    <div class="logo">room</div>
+                    <ul class="">
+                        <li class="list"><a href="#">Home</a></li>
+                        <li class="list"><a href="#">Shop</a></li>
+                        <li class="list"><a href="#">About</a></li>
+                        <li class="list"><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="btn_area">
+                    <div class="btn pre_btn"><img
+                            src="./images/icon-angle-left.svg"
+                            alt=""
+                        ></div>
+                    <div class="btn next_btn"><img
+                            src="./images/icon-angle-right.svg"
+                            alt=""
+                        ></div>
+                </div>
+
+            </div>
+            <div class="pureText block hero_text">
+                <h2>
+                    Discover innovative ways to decorate
+                </h2>
+                <p>
+                    We provide unmatched quality, comfort, and style for property owners across the country.
+                    Our experts combine form and function in bringing your vision to life. Create a room in your
+                    own style with our collection and make your property a reflection of you and what you love.
+                </p>
+                <button>
+                    <span>
+                        Shop now
+                    </span>
+                    <span>
+                        <svg
+                            width="40"
+                            height="12"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M34.05 0l5.481 5.527h.008v.008L40 6l-.461.465v.063l-.062-.001L34.049 12l-.662-.668 4.765-4.805H0v-1h38.206l-4.82-4.86L34.05 0z"
+                                fill="#000"
+                                fill-rule="nonzero"
+                            />
+                        </svg>
+                    </span>
+                </button>
+            </div>
+        </div>
+        <div class="botside">
+            <div class="pic_left block"></div>
+            <div class="pureText block">
+                <h2>About our furniture</h2>
+                <p>
+                    Our multifunctional collection blends design and function to suit your individual taste.
+                    Make each room unique, or pick a cohesive theme that best express your interests and what
+                    inspires you. Find the furniture pieces you need, from traditional to contemporary styles
+                    or anything in between. Product specialists are available to help you create your dream space.
+                </p>
+            </div>
+            <div class="pic_right block"></div>
+        </div>
+    </div>
+    
+    <!-- <div class="attribution">
+        Challenge by <a
+            href="https://www.frontendmentor.io?ref=challenge"
+            target="_blank"
+        >Frontend Mentor</a>.
+        Coded by <a href="#">Jun-Yan,Lin</a>.
+    </div> -->
+
+    <script>
+        let menu = document.querySelector('.nav>ul');
+        let anchors = document.querySelectorAll('.list');
+        document.querySelector('.menu').addEventListener('click', () => {
+            menu.classList.add('active')
+        });
+        menu.addEventListener('click', (e) => {
+            menu.classList.remove('active')
+        })
+        let data = [
+            { img: 'url(./images/desktop-image-hero-1.jpg)', tittle: 'Discover innovative ways to decorate', content: 'We provide unmatched quality, comfort, and style for property owners across the country.Our experts combine form and function in bringing your vision to life. Create a room in your own style with our collection and make your property a reflection of you and what you love.' },
+            {
+                img: 'url(./images/desktop-image-hero-2.jpg)', tittle: `We are available all across the globe`,content:`With stores all over the world, it's easy for you to find furniture for your home or place of business.Locally, we're in most major cities throughout the country. Find the branch nearest you using our
+    store locator. Any questions? Don't hesitate to contact us today.`},
+            {
+                img: 'url(./images/desktop-image-hero-3.jpg)', tittle: 'Manufactured with the best materials', content: `Our modern furniture store provide a high level of quality. Our company has invested in advanced technology
+    to ensure that every product is made as perfect and as consistent as possible. With three decades of
+    experience in this industry, we understand what customers want for their home and office.`}];
+
+        let pre = document.querySelector('.pre_btn');
+        let next = document.querySelector('.next_btn');
+        let heroImg = document.querySelector('.hero');
+        let heroText = document.querySelector('.hero_text>h2');
+        let heroContent = document.querySelector('.hero_text>p');
+        let dataIndex = 0
+        pre.addEventListener('click',()=>{
+            if(dataIndex == 0){
+                dataIndex = 2;
+            }else{
+                dataIndex -= 1;
+            }
+            heroImg.style.setProperty("background-image",`${data[dataIndex].img}`);
+            heroText.textContent = data[dataIndex].tittle;
+            heroContent.textContent = data[dataIndex].content;
+        })
+        next.addEventListener('click',()=>{
+            if(dataIndex == 2){
+                dataIndex = 0;
+            }else{
+                dataIndex += 1;
+            }
+            heroImg.style.setProperty("background-image",`${data[dataIndex].img}`);
+            heroText.textContent = data[dataIndex].tittle;
+            heroContent.textContent = data[dataIndex].content;
+        })
+    </script>
+</body>
+
+</html>
